@@ -1,0 +1,195 @@
+-------------
+PYTHON CODING
+-------------
+# Calculator in Python
+
+def display_menu():
+    print("\nWelcome to the Calculator!")
+    print("Select an operation to perform:")
+    print("1: Addition (+)")
+    print("2: Subtraction (-)")
+    print("3: Multiplication (*)")
+    print("4: Division (/)")
+    print("5: Modulus (%)")
+    print("6: Exponentiation (^)")
+    print("7: Floor Division (//)")
+    print("8: Exit\n")
+
+def get_numbers():
+    while True:
+        try:
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+            return num1, num2
+        except ValueError:
+            print("Invalid input! Please enter numeric values.")
+
+def calculate(choice, num1, num2):
+    if choice == 1:
+        return num1 + num2
+    elif choice == 2:
+        return num1 - num2
+    elif choice == 3:
+        return num1 * num2
+    elif choice == 4:
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero is undefined."
+    elif choice == 5:
+        return num1 % num2
+    elif choice == 6:
+        return num1 ** num2
+    elif choice == 7:
+        if num2 != 0:
+            return num1 // num2
+        else:
+            return "Error: Floor division by zero is undefined."
+
+def main():
+    while True:
+        display_menu()
+        try:
+            choice = int(input("Enter your choice (1-8): "))
+            if choice == 8:
+                print("Exiting the calculator. Goodbye!")
+                break
+            elif 1 <= choice <= 7:
+                num1, num2 = get_numbers()
+                result = calculate(choice, num1, num2)
+                print(f"The result is: {result}")
+            else:
+                print("Invalid choice! Please select a valid option (1-8).")
+        except ValueError:
+            print("Invalid input! Please enter a number between 1 and 8.")
+
+if __name__ == "__main__":
+    main()
+--------------
+OUT PUT
+--------------
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 1
+Enter the first number: 5
+Enter the second number: 4
+The result is: 9.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 2
+Enter the first number: 6
+Enter the second number: 4
+The result is: 2.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 3
+Enter the first number: 3
+Enter the second number: 8
+The result is: 24.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 4
+Enter the first number: 12
+Enter the second number: 6
+The result is: 2.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 5
+Enter the first number: 60
+Enter the second number: 4
+The result is: 0.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 6
+Enter the first number: 7
+Enter the second number: 8
+The result is: 5764801.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 7
+Enter the first number: 5
+Enter the second number: 9
+The result is: 0.0
+
+Welcome to the Calculator!
+Select an operation to perform:
+1: Addition (+)
+2: Subtraction (-)
+3: Multiplication (*)
+4: Division (/)
+5: Modulus (%)
+6: Exponentiation (^)
+7: Floor Division (//)
+8: Exit
+
+Enter your choice (1-8): 8
+Exiting the calculator. Goodbye!
