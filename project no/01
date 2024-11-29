@@ -1,0 +1,27 @@
+-------------
+PYTHON CODING
+-------------
+import random
+print("Welcome to random password generator!")
+randomchars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()"
+nbrofpwds=int(input("please enter the number of password to be generator: "))
+pwdlen=int(input("please enter the length of the password needed: "))
+
+print("Here are your random passwords: ")
+for x in range(nbrofpwds):
+    pwd = ""
+    for chars in range(pwdlen):
+        pwd = pwd + random.choice(randomchars)
+    print(pwd)
+-----------
+OUT PUT
+-----------
+Welcome to random password generator!
+please enter the number of password to be generator: 5
+please enter the length of the password needed: 10
+Here are your random passwords: 
+wkYfve#C50
+1HOOHGlteK
+pcdPMpv(eR
+KX1$dU9(W$
+NJhSo4OxmR
